@@ -70,6 +70,13 @@ public class View extends JFrame {
         computer2.setText(String.valueOf(computer));
         zahl2.setEnabled(false);
         button.setEnabled(true);
+        if (runden > 0) {
+            runde2.setBackground(Color.GREEN);
+            punkte2.setBackground(Color.GREEN);
+        } else {
+            runde2.setBackground(Color.RED);
+            punkte2.setBackground(Color.RED);
+        }
     }
 
     public void setController(ActionListener controller) {
@@ -83,5 +90,7 @@ public class View extends JFrame {
         computer2.setText("");
         zahl2.setEnabled(true);
         button.setEnabled(false);
+        runde2.setBackground(Color.WHITE);
+        punkte2.setBackground(Color.WHITE);
     }
 }
