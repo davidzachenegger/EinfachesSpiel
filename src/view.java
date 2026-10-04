@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class view extends JFrame {
 
@@ -10,8 +11,8 @@ public class view extends JFrame {
     JLabel runden = new JLabel("Rundenergebnis:");
     JLabel punkte = new JLabel("Gesamtpunkte:");
 
-    JLabel runde2 = new JLabel();
-    JLabel punkte2 = new JLabel();
+    JLabel runde2 = new JLabel("-");
+    JLabel punkte2 = new JLabel("-");
 
     JLabel zahl = new JLabel("Deine Zahl:");
     JLabel computer = new JLabel("Computer:");
@@ -19,7 +20,7 @@ public class view extends JFrame {
     JTextField zahl2 = new JTextField();
     JTextField computer2 = new JTextField();
 
-    JButton button = new JButton();
+    JButton button = new JButton("Noch einmal:");
 
     public view() {
         frame.setTitle("Zahlen-Gewinnspiel (v1.0)");
@@ -43,6 +44,23 @@ public class view extends JFrame {
         add(main);
         frame.setVisible(true);
     }
+
+    public void setGesamtpunkte(int Punkte) {
+        punkte2.setText(String.valueOf(Punkte));
+    }
+
+    public int getZahl() {
+        return Integer.parseInt(zahl2.getText());
+    }
+
+    public void setComputer(int computer) {
+        computer2.setText(String.valueOf(computer));
+    }
+
+    public void setController(ActionListener controller) {
+        button.addActionListener(controller);
+    }
+
     public static void main(String[] args) {
         new view();
     }
