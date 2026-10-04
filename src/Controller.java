@@ -14,11 +14,8 @@ public class Controller implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         if (e.getSource() == view.getObjectZahl2()) {
-
             try {
-
                 if (view.getIntZahl2() <= 1 || view.getIntZahl2() >= 9) {
                     view.ausgabe("Nur Zahlen von 1-9 sind erlaubt.");
                     return;
@@ -38,7 +35,6 @@ public class Controller implements ActionListener {
                 view.ausgabe("Zahl eingeben");
             }
         }
-
         else {
             view.reset();
         }

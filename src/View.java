@@ -31,6 +31,7 @@ public class View extends JFrame {
         punkte2.setBackground(Color.WHITE);
         zahl2.setBackground(Color.WHITE);
 
+        button.setEnabled(false);
         computer2.setEnabled(false);
 
         north.setLayout(new GridLayout(4,2));
@@ -67,6 +68,8 @@ public class View extends JFrame {
         runde2.setText(String.valueOf(runden));
         punkte2.setText(String.valueOf(punkte));
         computer2.setText(String.valueOf(computer));
+        zahl2.setEnabled(false);
+        button.setEnabled(true);
     }
 
     public void setController(ActionListener controller) {
@@ -78,5 +81,7 @@ public class View extends JFrame {
         runde2.setText("");
         zahl2.setText("");
         computer2.setText("");
+        zahl2.setEnabled(true);
+        button.setEnabled(false);
     }
 }
