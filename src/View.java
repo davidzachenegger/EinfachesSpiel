@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class view extends JFrame {
+public class View extends JFrame {
 
     JFrame frame = new JFrame();
     JPanel main = new JPanel();

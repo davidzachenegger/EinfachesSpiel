@@ -1,7 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class controller implements ActionListener {
+public class Controller implements ActionListener {
 
     private View view;
     private GewinnModel model;
