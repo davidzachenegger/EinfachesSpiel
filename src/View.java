@@ -67,6 +67,13 @@ public class View extends JFrame {
         runde2.setText(String.valueOf(runden));
         punkte2.setText(String.valueOf(punkte));
         computer2.setText(String.valueOf(computer));
+        if (runden > 0) {
+            runde2.setBackground(Color.GREEN);
+            punkte2.setBackground(Color.GREEN);
+        } else {
+            runde2.setBackground(Color.RED);
+            punkte2.setBackground(Color.RED);
+        }
     }
 
     public void setController(ActionListener controller) {
@@ -78,5 +85,7 @@ public class View extends JFrame {
         runde2.setText("");
         zahl2.setText("");
         computer2.setText("");
+        runde2.setBackground(Color.WHITE);
+        punkte2.setBackground(Color.WHITE);
     }
 }
