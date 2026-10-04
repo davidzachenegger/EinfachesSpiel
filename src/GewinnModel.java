@@ -8,7 +8,7 @@ public class GewinnModel {
     int rundenErgebnis;
 
     GewinnModel() {
-        spielerZahl = 30;
+        gesamtPunkte = 30;
         computerZahl = 30;
     }
 
