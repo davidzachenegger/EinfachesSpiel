@@ -22,7 +22,7 @@ public class View extends JFrame {
 
     JButton button = new JButton("Noch einmal:");
 
-    public view() {
+    public View() {
         frame.setTitle("Zahlen-Gewinnspiel (v1.0)");
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
