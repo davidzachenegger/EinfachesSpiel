@@ -19,21 +19,22 @@ public class controller implements ActionListener {
 
             try {
 
-                if (view.getIntZahl2() >= 1 && view.getIntZahl2() <= 9) {
-                    view.ausgabe("Nur Zahlen von 1-9 sind erlaubt.")
+                if (view.getIntZahl2() <= 1 && view.getIntZahl2() >= 9) {
+                    view.ausgabe("Nur Zahlen von 1-9 sind erlaubt.");
+                    return;
                 }
 
                 model.berechneComputerZahl();
                 model.berechneRunde(view.getIntZahl2());
                 view.setErgebnis(model.getRundenErgebnis(), model.getGesamtPunkte(), model.getComputerZahl());
 
-                if (model.hatGewonnen == true) {
+                if (model.hatGewonnen() == true) {
                     view.ausgabe("Gewonnen");
-                } else {
+                } else if(model.hatVerloren() == true){
                     view.ausgabe("Verloren");
                 }
 
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException exception) {
                 view.ausgabe("Zahl eingeben");
             }
         }

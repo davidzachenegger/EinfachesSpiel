@@ -27,6 +27,8 @@ public class view extends JFrame {
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        punkte2.setOpaque(true);
+        zahl2.setOpaque(true);
         punkte2.setBackground(Color.WHITE);
         zahl2.setBackground(Color.WHITE);
 
