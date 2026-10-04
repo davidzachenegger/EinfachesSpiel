@@ -12,7 +12,7 @@ public class view extends JFrame {
     JLabel punkte = new JLabel("Gesamtpunkte:");
 
     JLabel runde2 = new JLabel("-");
-    JLabel punkte2 = new JLabel("-");
+    JLabel punkte2 = new JLabel("30");
 
     JLabel zahl = new JLabel("Deine Zahl:");
     JLabel computer = new JLabel("Computer:");
@@ -24,8 +24,13 @@ public class view extends JFrame {
 
     public view() {
         frame.setTitle("Zahlen-Gewinnspiel (v1.0)");
-        frame.setSize(400,400);
+        frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        punkte2.setBackground(Color.WHITE);
+        zahl2.setBackground(Color.WHITE);
+
+        computer2.setEnabled(false);
 
         north.setLayout(new GridLayout(4,2));
         north.add(runden);
@@ -42,26 +47,26 @@ public class view extends JFrame {
         main.add(button,BorderLayout.SOUTH);
 
         add(main);
-        frame.setVisible(true);
-    }
-
-    public void setGesamtpunkte(int Punkte) {
-        punkte2.setText(String.valueOf(Punkte));
     }
 
     public int getZahl() {
-        return Integer.parseInt(zahl2.getText());
+        return Integer.parseInt(zahl.getText());
     }
 
-    public void setComputer(int computer) {
+    public void setErgebnisse(int runden, int punkte, int computer) {
+        runde2.setText(String.valueOf(runden));
+        punkte2.setText(String.valueOf(punkte));
         computer2.setText(String.valueOf(computer));
     }
 
     public void setController(ActionListener controller) {
+        zahl2.addActionListener(controller);
         button.addActionListener(controller);
     }
 
-    public static void main(String[] args) {
-        new view();
+    public void reset() {
+        runde2.setText("");
+        zahl2.setText("");
+        computer2.setText("");
     }
 }
