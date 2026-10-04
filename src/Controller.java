@@ -6,7 +6,7 @@ public class Controller implements ActionListener {
     private View view;
     private GewinnModel model;
 
-    public controller(View view, GewinnModel model){
+    public Controller(View view, GewinnModel model){
         this.view = view;
         this.model = model;
         this.view.setController(this);
@@ -19,14 +19,14 @@ public class Controller implements ActionListener {
 
             try {
 
-                if (view.getIntZahl2() <= 1 && view.getIntZahl2() >= 9) {
+                if (view.getIntZahl2() <= 1 || view.getIntZahl2() >= 9) {
                     view.ausgabe("Nur Zahlen von 1-9 sind erlaubt.");
                     return;
                 }
 
                 model.berechneComputerZahl();
                 model.berechneRunde(view.getIntZahl2());
-                view.setErgebnis(model.getRundenErgebnis(), model.getGesamtPunkte(), model.getComputerZahl());
+                view.setErgebnisse(model.getRundenErgebnis(), model.getGesamtPunkte(), model.getComputerZahl());
 
                 if (model.hatGewonnen() == true) {
                     view.ausgabe("Gewonnen");

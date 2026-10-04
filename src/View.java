@@ -4,7 +4,6 @@ import java.awt.event.ActionListener;
 
 public class View extends JFrame {
 
-    JFrame frame = new JFrame();
     JPanel main = new JPanel();
     JPanel north = new JPanel();
 
@@ -23,9 +22,9 @@ public class View extends JFrame {
     JButton button = new JButton("Noch einmal:");
 
     public View() {
-        frame.setTitle("Zahlen-Gewinnspiel (v1.0)");
-        frame.setSize(400,300);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Zahlen-Gewinnspiel (v1.0)");
+        setSize(400,300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         punkte2.setOpaque(true);
         zahl2.setOpaque(true);
@@ -49,6 +48,7 @@ public class View extends JFrame {
         main.add(button,BorderLayout.SOUTH);
 
         add(main);
+        setVisible(true);
     }
 
     public int getIntZahl2() {
