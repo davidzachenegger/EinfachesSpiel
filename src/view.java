@@ -49,8 +49,16 @@ public class view extends JFrame {
         add(main);
     }
 
-    public int getZahl() {
-        return Integer.parseInt(zahl.getText());
+    public int getIntZahl2() {
+        return Integer.parseInt(zahl2.getText());
+    }
+
+    public Object getObjectZahl2() {
+        return zahl2;
+    }
+
+    public void ausgabe(String text) {
+        runde2.setText(text);
     }
 
     public void setErgebnisse(int runden, int punkte, int computer) {
