@@ -16,7 +16,7 @@ public class Controller implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == view.getObjectZahl2()) {
             try {
-                if (view.getIntZahl2() <= 1 || view.getIntZahl2() >= 9) {
+                if (view.getIntZahl2() <= 0 || view.getIntZahl2() >= 10) {
                     view.ausgabe("Nur Zahlen von 1-9 sind erlaubt.");
                     return;
                 }

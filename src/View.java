@@ -10,7 +10,7 @@ public class View extends JFrame {
     JLabel runden = new JLabel("Rundenergebnis:");
     JLabel punkte = new JLabel("Gesamtpunkte:");
 
-    JLabel runde2 = new JLabel("-");
+    JLabel runde2 = new JLabel("Tippe eine Zahl von 1-9");
     JLabel punkte2 = new JLabel("30");
 
     JLabel zahl = new JLabel("Deine Zahl:");
