@@ -25,7 +25,6 @@ public class View extends JFrame {
         setTitle("Zahlen-Gewinnspiel (v1.0)");
         setSize(400,300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         runde2.setOpaque(true);
         punkte2.setOpaque(true);
