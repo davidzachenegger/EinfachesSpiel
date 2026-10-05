@@ -21,7 +21,7 @@ public class View extends JFrame {
 
     JButton button = new JButton("Noch einmal:");
 
-    public View() {
+    public View () {
         setTitle("Zahlen-Gewinnspiel (v1.0)");
         setSize(400,300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -54,19 +54,19 @@ public class View extends JFrame {
         setVisible(true);
     }
 
-    public int getIntZahl2() {
+    public int getIntZahl2 () {
         return Integer.parseInt(zahl2.getText());
     }
 
-    public Object getObjectZahl2() {
+    public Object getObjectZahl2 () {
         return zahl2;
     }
 
-    public void ausgabe(String text) {
+    public void ausgabe (String text) {
         runde2.setText(text);
     }
 
-    public void setErgebnisse(int runden, int punkte, int computer) {
+    public void setErgebnisse (int runden, int punkte, int computer) {
         runde2.setText(String.valueOf(runden));
         punkte2.setText(String.valueOf(punkte));
         computer2.setText(String.valueOf(computer));
@@ -81,12 +81,12 @@ public class View extends JFrame {
         }
     }
 
-    public void setController(ActionListener controller) {
+    public void setController (ActionListener controller) {
         zahl2.addActionListener(controller);
         button.addActionListener(controller);
     }
 
-    public void reset() {
+    public void reset () {
         runde2.setText("");
         zahl2.setText("");
         computer2.setText("");

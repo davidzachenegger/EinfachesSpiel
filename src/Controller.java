@@ -6,14 +6,14 @@ public class Controller implements ActionListener {
     private View view;
     private GewinnModel model;
 
-    public Controller(View view, GewinnModel model){
+    public Controller (View view, GewinnModel model) {
         this.view = view;
         this.model = model;
         this.view.setController(this);
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed (ActionEvent e) {
         if (e.getSource() == view.getObjectZahl2()) {
             try {
                 if (view.getIntZahl2() <= 0 || view.getIntZahl2() >= 10) {
@@ -27,7 +27,7 @@ public class Controller implements ActionListener {
 
                 if (model.hatGewonnen() == true) {
                     view.ausgabe("Gewonnen");
-                } else if (model.hatVerloren() == true){
+                } else if (model.hatVerloren() == true) {
                     view.ausgabe("Verloren");
                 }
 
