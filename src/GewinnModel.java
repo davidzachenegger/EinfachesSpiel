@@ -3,7 +3,6 @@ import java.util.Random;
 public class GewinnModel {
 
     int gesamtPunkte;
-    int spielerZahl;
     int computerZahl;
     int rundenErgebnis;
 
@@ -33,7 +32,7 @@ public class GewinnModel {
         if(spielerZahl == this.computerZahl) {
             this.rundenErgebnis = 20;
         }
-        if(spielerZahl++ == this.spielerZahl || spielerZahl-- == this.computerZahl) {
+        if(spielerZahl++ == this.computerZahl || spielerZahl-- == this.computerZahl) {
             this.rundenErgebnis = 5;
         }
         else  {
