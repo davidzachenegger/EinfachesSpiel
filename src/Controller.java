@@ -27,7 +27,7 @@ public class Controller implements ActionListener {
 
                 if (model.hatGewonnen() == true) {
                     view.ausgabe("Gewonnen");
-                } else if(model.hatVerloren() == true){
+                } else if (model.hatVerloren() == true){
                     view.ausgabe("Verloren");
                 }
 
