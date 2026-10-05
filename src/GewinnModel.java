@@ -31,7 +31,7 @@ public class GewinnModel {
     public void berechneRunde(int spielerZahl) {
         if(spielerZahl == this.computerZahl) {
             this.rundenErgebnis = 20;
-        } else if(spielerZahl++ == this.computerZahl || spielerZahl-- == this.computerZahl) {
+        } else if(spielerZahl == this.computerZahl + 1 || spielerZahl == this.computerZahl - 1) {
             this.rundenErgebnis = 5;
         }
         else  {
